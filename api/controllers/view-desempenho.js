@@ -12,6 +12,6 @@
  */
 module.exports = async function viewDesempenho(req, res) {
   
-  return res.view('pages/desempenho');
+  return res.view('pages/view-desempenho');
 
 };
