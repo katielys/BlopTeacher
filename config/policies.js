@@ -20,7 +20,7 @@ module.exports.policies = {
   'view-contact': true,
   'legal/view-terms': true,
   'legal/view-privacy': true,
-   'account/desempenhoT':true,
+  'account/view-turma':true,
   'deliver-contact-form-message': true,
 
 };
