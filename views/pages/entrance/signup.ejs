@@ -1,27 +1,27 @@
 <div id="signup" v-cloak>
   <div class="container" v-if="!cloudSuccess">
-    <h1 class="text-center">Create an account</h1>
+    <h1 class="text-center">Criar Conta</h1>
     <div class="signup-form">
       <p class="text-center">Let's get started! Becoming a member is free and only takes a few minutes.</p>
       <hr/>
       <ajax-form action="signup" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()" :handle-parsing="handleParsingForm">
         <div class="form-group">
-          <label for="full-name">Full name</label>
+          <label for="full-name">Nome completo</label>
           <input class="form-control" id="full-name" type="text"  :class="[formErrors.fullName ? 'is-invalid' : '']" v-model.trim="formData.fullName" placeholder="Sturgis P. Sturgeon" autocomplete="name" focus-first>
           <div class="invalid-feedback" v-if="formErrors.fullName">Please enter your full name.</div>
         </div>
         <div class="form-group">
-          <label for="email-address">Email address</label>
+          <label for="email-address">Email </label>
           <input class="form-control" id="email-address" type="email"  :class="[formErrors.emailAddress ? 'is-invalid' : '']" v-model.trim="formData.emailAddress" placeholder="sturgeon@example.com" autocomplete="email">
           <div class="invalid-feedback" v-if="formErrors.emailAddress">Please enter a valid email address.</div>
         </div>
         <div class="form-group">
-          <label for="password">Choose a password</label>
+          <label for="password">Escolha a senha</label>
           <input class="form-control" id="password" type="password"  :class="[formErrors.password ? 'is-invalid' : '']" v-model.trim="formData.password" placeholder="••••••••" autocomplete="new-password">
           <div class="invalid-feedback" v-if="formErrors.password">Please enter a password.</div>
         </div>
         <div class="form-group">
-          <label for="confirm-password">Confirm password</label>
+          <label for="confirm-password">Confirme sua senha</label>
           <input class="form-control" id="confirm-password" type="password"  :class="[formErrors.confirmPassword ? 'is-invalid' : '']" v-model.trim="formData.confirmPassword" placeholder="••••••••" autocomplete="new-password">
           <div class="invalid-feedback" v-if="formErrors.confirmPassword">Your password and confirmation do not match.</div>
         </div>
