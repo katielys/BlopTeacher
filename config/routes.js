@@ -28,7 +28,7 @@ module.exports.routes = {
   'GET /login':              { action: 'entrance/view-login' },
   'GET /password/forgot':    { action: 'entrance/view-forgot-password' },
   'GET /password/new':       { action: 'entrance/view-new-password' },
-  'GET /desempenho':         { action: 'view/desempenho' },
+  'GET /account/desempenhoT': { action: 'account/desempenhoT' },
   'GET /account':            { action: 'account/view-account-overview' },
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
