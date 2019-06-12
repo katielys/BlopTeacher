@@ -38,6 +38,11 @@ module.exports = {
   
   owner : {
     model: 'user'
+  },
+
+  alunos: {
+    collection: 'aluno',
+    via: 'study'
   }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

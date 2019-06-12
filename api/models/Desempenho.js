@@ -8,8 +8,33 @@
 module.exports = {
 
   attributes: {
-    
 
+    erros: {
+      type: 'string',
+      maxLength: 200,
+      example: '10'
+    },
+
+    acertos: {
+      type: 'string',
+      maxLength: 200,
+      example: '10'
+    },
+
+    tempo: {
+      type: 'string',
+      maxLength: 200,
+      example: '10'
+    },
+
+  },
+  
+  study : {
+    model: 'aluno'
+  },
+
+  notinha : {
+    model: 'desempenho'
   },
 
 };

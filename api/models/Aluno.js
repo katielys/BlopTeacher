@@ -34,5 +34,14 @@ module.exports = {
 
   },
 
+  study : {
+    model: 'aluno'
+  },
+
+  notas: {
+    collection : 'desempenho',
+    via : 'notinha'
+  }
+
 };
 
