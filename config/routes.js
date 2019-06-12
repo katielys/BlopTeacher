@@ -41,10 +41,10 @@ module.exports.routes = {
   '/terms':                   '/legal/terms',
   '/logout':                  '/api/v1/account/logout',
 
-
-  'GET /Turma/new': 'TurmaController.create',
+  'GET /account/criar-turma' : {action: 'account/view-criar-turma' },
+  'POST /turma/create': 'TurmaController.create' ,
   'GET /Turma/index': 'TurmaController.read',
-  'GET /Turma/update/:id': 'TurmaController.update',
+  'POST /Turma/update/:id': 'TurmaController.update',
   'GET /Turma/delete/:id': 'TurmaController.delete',
 //esse desempenhot nao funciona
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
