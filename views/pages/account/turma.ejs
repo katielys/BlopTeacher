@@ -1,6 +1,34 @@
-<div id="faq">
-    <div class="container">
-        <h1>Aqui esta suas turmas</h1>
+<h1>Listando Turmas</h1>
 
-    </div>
-</div>
+<table>
+  <tr>
+    <th>Nome   </th>
+    <th>Apelido</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<!--
+	<% for(user in Turma) { %>
+	<tr>
+	  <td><%= Turma[user].nome %></td>
+	  <td><%= Turma[user].email %></td>
+    <td><a href="/user/show/<%= Turma[user].id %>">Show</a></td>
+    <td><a href="/user/edit/<%= Turma[user].id %>">Edit</a></td>
+	<% } %>
+	</tr>
+
+-->
+  <% _.each(Turma, function (user) { %>
+  <tr>
+    <td><%= user.nome %></td>
+    <td><%= user.id %></td>
+    <td><a href="/user/show/<%= user.id %>">Mostrar</a></td>
+    <td><a href="/Turma/update/<%= user.id %>">Editar</a></td>
+     <td><a href="/Turma/delete/<%= user.id %>">Apagar</a></td>
+  <% }) %>
+  </tr>
+</table>
+<br />
+
+<a href="/Turma">Criar Nova Turma</a>

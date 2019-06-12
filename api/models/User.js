@@ -102,10 +102,7 @@ So, while this \`isSuperAdmin\` demarcation might not be the right approach fore
       example: 1502844074211
     },
 
-    Turmas: {
-      collection: 'Turma',
-      via : 'owner'
-    }
+ 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -118,6 +115,10 @@ So, while this \`isSuperAdmin\` demarcation might not be the right approach fore
     // n/a
 
   },
+  Turmas: {
+    collection: 'Turma',
+    via : 'owner'
+  }
 
 
 };

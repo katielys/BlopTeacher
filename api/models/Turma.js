@@ -27,8 +27,7 @@ module.exports = {
 
     desempenhoGeral:{
       type:'string',
-      required:true,
-      maxLength:'50',
+      maxLength:50,
       example:'10,0%'
     }
 
