@@ -38,7 +38,6 @@ https://www.npmjs.com/package/sails-firebase olhar isso depois
 - [ ] Host
 - [X] BD
 - [ ] view turma
-- [ ] criar grupo
 - [ ] visualizar aluno
 - [ ] mudar logo
 - [ ] colocar imagens do blop!

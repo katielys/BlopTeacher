@@ -9,10 +9,36 @@ module.exports = {
 
   attributes: {
 
-    //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-    //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-    //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
+    nome: {
+      type: 'string',
+      required: true,
+      unique: true,
+      maxLength: 200,
+      example: 'Turma da Monica'
+    },
 
+    id: {
+      type: 'string',
+      required: true,
+      unique: true,
+      maxLength: 20,
+      example: 'TCMO'
+    },
+
+    desempenhoGeral:{
+      type:'string',
+      required:true,
+      maxLength:'50',
+      example:'10,0%'
+    }
+
+
+  },
+
+  
+  owner : {
+    model: 'user'
+  }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -23,7 +49,7 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-  },
+
 
 };
 
