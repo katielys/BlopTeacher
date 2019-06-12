@@ -7,7 +7,7 @@
 
 module.exports = {
 
-    create: function (req, res) {
+    create: async function (req, res) {
         let data;
 
         data = {
@@ -21,13 +21,13 @@ module.exports = {
         })
     },
 
-    read: function (req, res) {
+    read: asyncfunction (req, res) {
         Turma.find().exec(function (err, Turma) {
             return res.json(Turma);
         });
     },
 
-    update: function (req, res) {
+    update: async function (req, res) {
         let query;
         let data;
         query = { "id": req.param('id') }
@@ -43,7 +43,7 @@ module.exports = {
         })
     },
 
-    delete: function (req, res) {
+    delete: async function (req, res) {
         let query;
         query = { "id": req.param('id') }
         Turma.destroy(query).fetch().exec(function (err, Turma) {

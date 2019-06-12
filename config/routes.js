@@ -42,9 +42,9 @@ module.exports.routes = {
   '/logout':                  '/api/v1/account/logout',
 
 
-  'POST /Turma/new': 'TurmaController.create',
+  'GET /Turma/new': 'TurmaController.create',
   'GET /Turma/index': 'TurmaController.read',
-  'POST /Turma/update/:id': 'TurmaController.update',
+  'GET /Turma/update/:id': 'TurmaController.update',
   'GET /Turma/delete/:id': 'TurmaController.delete',
 //esse desempenhot nao funciona
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
