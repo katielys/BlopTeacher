@@ -1,14 +1,16 @@
 <h1>Listando Turmas</h1>
-
+<a href="/Turma/new">
+<button title="Criar Turma" type="button" class="btn btn-sm pull-right" style="margin-right: 5px;">
+    <i class="fa fa-lg fa-plus-circle"></i>
+</button>
+</a>
 <table>
-  <tr>
-    <th>Nome   </th>
-    <th>Apelido</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-<!--
+    <tr>
+        <th>Nome </th>
+        <th> - Sigla</th>
+        
+    </tr>
+    <!--
 	<% for(user in Turma) { %>
 	<tr>
 	  <td><%= Turma[user].nome %></td>
@@ -19,16 +21,20 @@
 	</tr>
 
 -->
-  <% _.each(Turma, function (user) { %>
-  <tr>
-    <td><%= user.nome %></td>
-    <td><%= user.id %></td>
-    <td><a href="/user/show/<%= user.id %>">Mostrar</a></td>
-    <td><a href="/Turma/update/<%= user.id %>">Editar</a></td>
-     <td><a href="/Turma/delete/<%= user.id %>">Apagar</a></td>
-  <% }) %>
-  </tr>
+    <% _.each(Turma, function (user) { %>
+    <tr>
+        <td><%= user.nome %></td>
+        <td><%= user.id %></td>
+        <td><a href=" /Turma/index<%= user.id %>">Mostrar</a></td>
+        <td><a href="/Turma/update/<%= user.id %>">Editar</a>
+
+        </td>
+        <td><a href="/Turma/delete/<%= user.id %>">Apagar</a>
+
+        </td>
+        <% }) %>
+    </tr>
 </table>
 <br />
 
-<a href="/Turma">Criar Nova Turma</a>
+<a href="/Turma/new">Criar Nova Turma</a>
