@@ -21,7 +21,7 @@ module.exports = {
         })
     },
 
-    read: asyncfunction (req, res) {
+    read: async function (req, res) {
         Turma.find().exec(function (err, Turma) {
             return res.json(Turma);
         });
