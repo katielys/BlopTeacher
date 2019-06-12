@@ -36,7 +36,7 @@ https://www.npmjs.com/package/sails-firebase olhar isso depois
 - [X] mudar senha
 - [ ] Traduzir
 - [ ] Host
-- [ ] BD
+- [X] BD
 - [ ] view turma
 - [ ] criar grupo
 - [ ] visualizar aluno
