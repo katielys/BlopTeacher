@@ -1,6 +1,6 @@
 /**
  * TurmaController
- *
+ *https://www.agiratech.com/create-crud-operation-on-sails-js-explaining-ejs/
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
@@ -12,9 +12,10 @@ module.exports = {
 
         data = {
             name: req.body.nome,
-            id: req.boby.id,
-            desempenhoGeral: "0"
+         
         }
+
+       
         Turma.create(data).fetch().exec(function (err, Turma) {
             if (err) return (err);
             return res.json(Turma);
@@ -30,11 +31,11 @@ module.exports = {
     update: async function (req, res) {
         let query;
         let data;
-        query = { "id": req.param('id') }
+        query = { "nome": req.param('nome') }
 
         data = { 
             name: req.body.nome,
-            id: req.boby.id,
+            //id: req.boby.id,
             desempenhoGeral: req.body.desempenhoGeral
          }
         Turma.update(query, data).fetch().exec(function (err, Turma) {

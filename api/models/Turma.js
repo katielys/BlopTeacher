@@ -17,10 +17,10 @@ module.exports = {
       example: 'Turma da Monica'
     },
 
-    id: {
+    cod: {
       type: 'string',
-      required: true,
-      unique: true,
+      //required: true,
+     // unique: true,
       maxLength: 20,
       example: 'TCMO'
     },

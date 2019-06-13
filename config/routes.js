@@ -44,8 +44,8 @@ module.exports.routes = {
   'GET /account/criar-turma' : {action: 'account/view-criar-turma' },
   'POST /turma/create': 'TurmaController.create' ,
   'GET /Turma/index': 'TurmaController.read',
-  'POST /Turma/update/:id': 'TurmaController.update',
-  'GET /Turma/delete/:id': 'TurmaController.delete',
+  'PUT /Turma/update/:id': 'TurmaController.update',
+  'DELETE /Turma/delete/:id': 'TurmaController.delete',
 //esse desempenhot nao funciona
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

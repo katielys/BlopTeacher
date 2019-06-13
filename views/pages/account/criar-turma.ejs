@@ -1,21 +1,21 @@
 <h1> Criando a turma </h1>
 <hr>
-<form>
+<form action ="/turma/create" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Nome da Turma</label>
-      <input type="text" class="form-control" id="nome" placeholder="Nome da turma">
+      <input type="text" class="form-control" id="nome" name = "nome"placeholder="Nome da turma">
     
     </div>
 
     <div class="form-group">
       <label for="exampleInputPassword1">Digite um codigo</label>
-      <input type="text" class="form-control" id="id" placeholder="IE07">
+      <input type="text" class="form-control" id="cod" name="cod" placeholder="IE07">
     </div>
    
    
    
     <button type="submit" class="btn btn-dark">Criar</button>
-    <% var document%>
+
     <button type="reset" class="btn btn-primary">Cancelar</button>
     
   </form>
