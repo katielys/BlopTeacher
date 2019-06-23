@@ -41,11 +41,15 @@ module.exports.routes = {
   '/terms':                   '/legal/terms',
   '/logout':                  '/api/v1/account/logout',
 
-  'GET /account/criar-turma' : {action: 'account/view-criar-turma' },
+  //ROTAS DO BLOP
+  //'GET /aluno/readId/:idAluno' : { action : 'aluno/readId' },
+  //'GET /aluno/readName/:nomeAluno' : { action : 'aluno/readName' },
+
+  /*'GET /account/criar-turma' : {action: 'account/view-criar-turma' },
   'POST /turma/create': 'TurmaController.create' ,
   'GET /Turma/index': 'TurmaController.read',
   'PUT /Turma/update/:id': 'TurmaController.update',
-  'DELETE /Turma/delete/:id': 'TurmaController.delete',
+  'DELETE /Turma/delete/:id': 'TurmaController.delete',*/
 //esse desempenhot nao funciona
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗

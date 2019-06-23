@@ -115,10 +115,8 @@ So, while this \`isSuperAdmin\` demarcation might not be the right approach fore
     // n/a
 
   },
-  Turmas: {
+  turmas: {
     collection: 'Turma',
-    via : 'owner'
+    via : 'professor'
   }
-
-
 };
