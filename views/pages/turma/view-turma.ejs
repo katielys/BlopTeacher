@@ -1,0 +1,23 @@
+<div class="container">
+	<br><br>
+	<h1><%=turma.nome%></h1>
+	<div>
+		<h3>Alunos</h3>
+		<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nome</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%turma.alunos.forEach(function(aluno){ %>
+				<tr>
+					<td>
+						<a href="/aluno/<%=aluno.id%>"><%=aluno.nome%></a>
+					</td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+	<br><br>
+	<h1> Suas Turmas </h1>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Número de alunos</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%turmas.forEach(function(turma){ %>
+				<tr>
+					<td>
+						<a href="/turma/detalhes/<%=turma.id%>"><%=turma.nome%></a>
+					</td>
+					<td><%=turma.alunos.length%></td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+</div>

@@ -31,37 +31,22 @@ module.exports.routes = {
   'GET /account':            { action: 'account/view-account-overview' },
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
-  'GET /account/turma':      { action: 'account/view-turma' },
-  'GET /desempenho':         { action: 'view-desempenho' },
 
-
-  //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
-  //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
-  //  ╩ ╩╩╚═╝╚═╝  ╩╚═╚═╝═╩╝╩╩╚═╚═╝╚═╝ ╩ ╚═╝  └┘   ═╩╝╚═╝╚╩╝╝╚╝╩═╝╚═╝╩ ╩═╩╝╚═╝
   '/terms':                   '/legal/terms',
   '/logout':                  '/api/v1/account/logout',
 
-  //ROTAS DO BLOP
-  //'GET /aluno/readId/:idAluno' : { action : 'aluno/readId' },
-  //'GET /aluno/readName/:nomeAluno' : { action : 'aluno/readName' },
+  //-------------------ROTAS DO BLOP----------------------
+  //Aluno
+  'GET /aluno/:idAluno' : { action : 'aluno/get-id' },
+  //Pontuacao
 
-  /*'GET /account/criar-turma' : {action: 'account/view-criar-turma' },
-  'POST /turma/create': 'TurmaController.create' ,
-  'GET /Turma/index': 'TurmaController.read',
-  'PUT /Turma/update/:id': 'TurmaController.update',
-  'DELETE /Turma/delete/:id': 'TurmaController.delete',*/
-//esse desempenhot nao funciona
-  //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
-  //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
-  //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
-  // …
+  //Turma
+  'GET /turma/:professor' : { action : 'turma/get-turmas' },
+  'GET /turma/detalhes/:idTurma' : { action : 'turma/view-turma' },
+  'DELETE /turma/delete/:idTurma' : { action : 'turma/delete-turma' },
 
+  //------------------FIM ROTAS DO BLOP-------------------
 
-  //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
-  //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
-  //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-  // Note that, in this app, these API endpoints may be accessed using the `Cloud.*()` methods
-  // from the Parasails library, or by using those method names as the `action` in <ajax-form>.
   '/api/v1/account/logout':                           { action: 'account/logout' },
   'PUT   /api/v1/account/update-password':            { action: 'account/update-password' },
   'PUT   /api/v1/account/update-profile':             { action: 'account/update-profile' },

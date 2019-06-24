@@ -1,0 +1,76 @@
+<div class="container">
+	<br><br>
+	<h1><%=aluno.nome%></h1>
+	<div>
+		<h3>Desempenho do aluno</h3>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Fase</th>
+					<th>Média de acertos</th>
+					<th>Média de erros</th>
+					<th>Média de tempo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+					var acertos_um = 0, acertos_dois = 0, acertos_tres = 0, acertos_quatro = 0;
+    				var erros_um = 0, erros_dois = 0, erros_tres = 0, erros_quatro = 0;
+    				var tempo_um = 0, tempo_dois = 0, tempo_tres = 0, tempo_quatro = 0;
+    				var contUm = 0, contDois = 0, contTres = 0, contQuatro = 0;
+
+    				aluno.pontuacoes.forEach(function(score){
+        				if(score.fase == 1){
+          					contUm += 1;
+          					acertos_um += score.num_acertos;
+          					erros_um += score.num_erros;
+          					tempo_um += score.tempo;
+        				}
+        				else if(score.fase == 2){
+          					contDois += 1;
+					        acertos_dois += score.num_acertos;
+          					erros_dois += score.num_erros;
+          					tempo_dois += score.tempo;
+        				}
+				        else if(score.fase == 3){
+          					contTres += 1;
+          					acertos_tres += score.num_acertos;
+          					erros_tres += score.num_erros;
+          					tempo_tres += score.tempo;
+        				}
+        				else if(score.fase == 4){
+          					contQuatro += 1;
+          					acertos_quatro += score.num_acertos;
+          					erros_quatro += score.num_erros;
+          					tempo_quatro += score.tempo;
+        				}
+      				});
+				%>
+				<tr>
+          			<td>Lógica booleana</td>
+          			<td><%=acertos_um/contUm%></td>
+          			<td><%=erros_um/contUm%></td>
+          			<td><%=tempo_um/contUm%></td>
+        		</tr>
+        		<tr>
+          			<td>Divisão e conquista</td>
+					<td><%=acertos_dois/contDois%></td>
+          			<td><%=erros_dois/contDois%></td>
+          			<td><%=tempo_dois/contDois%></td>
+        		</tr>
+        		<tr>
+          			<td>Estruturas de repeticao</td>
+          			<td><%=acertos_tres/contTres%></td>
+          			<td><%=erros_tres/contTres%></td>
+          			<td><%=tempo_tres/contTres%></td>
+        		</tr>
+        		<tr>
+          			<td>Juncao dos conceitos</td>
+          			<td><%=acertos_quatro/contQuatro%></td>
+          			<td><%=erros_quatro/contQuatro%></td>
+          			<td><%=tempo_quatro/contQuatro%></td>
+        		</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
