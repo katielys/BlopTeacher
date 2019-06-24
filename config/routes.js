@@ -43,7 +43,8 @@ module.exports.routes = {
   //Turma
   'GET /turma/:professor' : { action : 'turma/get-turmas' },
   'GET /turma/detalhes/:idTurma' : { action : 'turma/view-turma' },
-  'DELETE /turma/delete/:idTurma' : { action : 'turma/delete-turma' },
+  'GET /turma/confirm-delete/:idTurma/:idProfessor' : { action : 'turma/confirm-delete-turma'},
+  'POST /turma/delete/:idTurma/:idProfessor' : { action : 'turma/delete-turma' },
 
   //------------------FIM ROTAS DO BLOP-------------------
 
