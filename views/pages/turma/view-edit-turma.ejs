@@ -1,0 +1,27 @@
+<div class="container">
+    <br><br>
+    <h2 style="display: inline-block; vertical-align: top">Editar turma</h2>
+    <button style="display: inline-block; vertical-align: top; margin-left: 600px" class="btn btn-primary" onclick="updateTurma()">Salvar alteracoes</button><br>
+    <% if(turma){%>
+        <script>
+            turma = JSON.parse ('<%-JSON.stringify(turma) %>');
+        </script>
+    <% } %>
+    <script src="/turma/edit-turma.js"></script>
+    <form>
+        <h4 style="display: inline-block">Nome: </h4>
+        <input type="text" id="bota-nome-turma" value="<%=turma.nome%>"><br><br>
+        <input class="btn btn-primary" type="button" onclick="getAluno()" value="Pesquisar aluno">
+        <input type="text" id="bota-nome-aluno">
+    </form>
+    <table style="margin-top: 20px" class="table table-striped">
+        <thead>
+            <tr><th>Alunos adicionados</th></tr>
+        </thead>
+        <tbody id="lista-alunos">
+        </tbody>
+    </table>
+    <script>
+    	reloadList();
+    </script>
+</div>

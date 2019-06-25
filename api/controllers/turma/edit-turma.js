@@ -1,28 +1,8 @@
-module.exports = {
+module.exports = async function (req, res) {
+  await Turma.update({id : req.body.id}).set({
+    nome : req.body.nome,
+    alunos : req.body.alunos
+  });
 
-
-  friendlyName: 'Edit turma',
-
-
-  description: 'Atualiza os dados de uma determinada turma',
-
-
-  inputs: {
-
-  },
-
-
-  exits: {
-
-  },
-
-
-  fn: async function (inputs) {
-
-    // All done.
-    return;
-
-  }
-
-
+  return res.ok();
 };

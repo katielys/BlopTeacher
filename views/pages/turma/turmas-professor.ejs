@@ -9,6 +9,7 @@
 			<tr>
 				<th>Nome</th>
 				<th>Número de alunos</th>
+				<th>Opcoes</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -19,6 +20,11 @@
 						<a href="/turma/detalhes/<%=turma.id%>"><%=turma.nome%></a>
 					</td>
 					<td><%=turma.alunos.length%></td>
+					<td>
+						<form action="/turma/edit-turma/<%=turma.id%>" method="GET">
+							<input type="submit" value="Editar" class="btn btn-primary">
+						</form>
+					</td>
 					<td>
 						<form action="/turma/confirm-delete/<%=turma.id%>/<%=turma.professor%>" method="GET">
 							<input type="submit" value="Excluir" class="btn btn-danger">

@@ -46,6 +46,8 @@ module.exports.routes = {
   'GET /turma/detalhes/:idTurma' : { action : 'turma/view-turma' },
   'GET /turma/create-turma/:idProfessor' : { action : 'turma/view-create-turma' },
   'POST /turma/nova-turma' : { action : 'turma/add-turma' },
+  'GET /turma/edit-turma/:idTurma' : { action : 'turma/view-edit-turma'},
+  'POST /turma/update-turma' : {action : 'turma/edit-turma' },
   'GET /turma/confirm-delete/:idTurma/:idProfessor' : { action : 'turma/confirm-delete-turma'},
   'POST /turma/delete/:idTurma/:idProfessor' : { action : 'turma/delete-turma' },
 
