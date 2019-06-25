@@ -16,6 +16,6 @@
 module.exports.datastores = {
   default: {
     adapter: 'sails-mysql',
-    url: 'mysql://sgroot:Ys4xyroWQpC%40ZPBF@SG-BLOP-826-master.servers.mongodirector.com:3306/BLOP_TESTE',
+    url: 'mysql://sgroot:Ys4xyroWQpC%40ZPBF@SG-BLOP-826-master.servers.mongodirector.com:3306/BLOP_DATA',
   }
 };

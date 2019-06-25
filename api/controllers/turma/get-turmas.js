@@ -30,6 +30,9 @@ module.exports = {
       });
     }
 
-    return {turmas : turmasProf};
+    return {
+      turmas : turmasProf,
+      idProfessor : inputs.professor
+    };
   }
 };
