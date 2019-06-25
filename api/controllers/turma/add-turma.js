@@ -5,5 +5,5 @@ module.exports = async function (req, res) {
     alunos : req.body.alunos
   });
 
-  return res.redirect('/turma/'+req.body.professor.id);
+  return res.ok();
 };

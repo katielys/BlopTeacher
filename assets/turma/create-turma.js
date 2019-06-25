@@ -1,4 +1,5 @@
-listaAlunos = [];
+listaNomeAlunos = [];
+listaIdAlunos = [];
 
 function getAluno(){
     var nomeAluno = $('#bota-nome-aluno').val();
@@ -10,7 +11,8 @@ function getAluno(){
             nomeAluno : nomeAluno
         },
         success : function(aluno){
-            listaAlunos.push(aluno);
+            listaNomeAlunos.push(aluno.nome);
+            listaIdAlunos.push(aluno.id);
             reloadList();
         },
         error : function(aluno){
@@ -25,10 +27,10 @@ function reloadList(){
         lista.removeChild(lista.firstChild);
     }
 
-    listaAlunos.forEach(aluno => {
+    listaNomeAlunos.forEach(nomeAluno => {
         var row = document.createElement('TR');
         var td = document.createElement('TD');
-        var texto = document.createTextNode(aluno.nome);
+        var texto = document.createTextNode(nomeAluno);
 
         td.appendChild(texto);
         row.appendChild(td);
@@ -38,7 +40,7 @@ function reloadList(){
 }
 
 function salvaTurma(){
-    console.log(listaAlunos.length);
+    console.log(listaNomeAlunos.length);
     var nomeTurma = $('#bota-nome-turma').val();
     console.log(nomeTurma);
     console.log(teacher.fullName);
@@ -48,14 +50,15 @@ function salvaTurma(){
         type : 'post',
         data : {
             nome : nomeTurma,
-            professor : teacher,
-            alunos : listaAlunos
+            professor : teacher.id,
+            alunos : listaIdAlunos
         },
         success : function(aluno){
-            alert('sucesso');
+            alert('Turma salva com sucesso');
+            window.location.href = '/turma/' + teacher.id;
         },
         error : function(aluno){
-            alert('Sem sucesso');
+            alert('Falha ao salvar turma');
         }
     });
 }
