@@ -1,7 +1,10 @@
 <div class="container">
 	<br><br>
-	<h1> Suas Turmas </h1>
-	<table class="table table-striped">
+	<h2 style="display: inline-block; vertical-align: top"> Suas Turmas </h2>
+	<form style="display: inline-block; vertical-align: top; margin-left: 600px" action="/turma/create-turma/<%=turmas[0].professor%>" method="get">
+		<input type="submit" value="Criar nova turma" class="btn btn-primary">
+	</form>
+	<table style="margin-top: 10px" class="table table-striped">
 		<thead>
 			<tr>
 				<th>Nome</th>

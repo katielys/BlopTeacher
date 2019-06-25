@@ -37,12 +37,15 @@ module.exports.routes = {
 
   //-------------------ROTAS DO BLOP----------------------
   //Aluno
-  'GET /aluno/:idAluno' : { action : 'aluno/get-id' },
+  'GET /aluno/id/:idAluno' : { action : 'aluno/get-id' },
+  'POST /aluno/nome/' : { action : 'aluno/get-nome' },
   //Pontuacao
 
   //Turma
   'GET /turma/:professor' : { action : 'turma/get-turmas' },
   'GET /turma/detalhes/:idTurma' : { action : 'turma/view-turma' },
+  'GET /turma/create-turma/:idProfessor' : { action : 'turma/view-create-turma' },
+  'POST /turma/nova-turma' : { action : 'turma/add-turma' },
   'GET /turma/confirm-delete/:idTurma/:idProfessor' : { action : 'turma/confirm-delete-turma'},
   'POST /turma/delete/:idTurma/:idProfessor' : { action : 'turma/delete-turma' },
 

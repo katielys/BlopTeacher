@@ -26,7 +26,7 @@ module.exports = {
     
     if(!turmasProf){
       return exits.invalid({
-        message : 'O professor nao possui pontuacoes no sistema'
+        message : 'O professor nao possui turmas no sistema'
       });
     }
 

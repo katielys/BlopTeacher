@@ -1,28 +1,9 @@
-module.exports = {
+module.exports = async function (req, res) {
+  await Turma.create({
+    nome : req.body.nome,
+    professor : req.body.professor,
+    alunos : req.body.alunos
+  });
 
-
-  friendlyName: 'Add turma',
-
-
-  description: 'Cria uma nova turma para o professor',
-
-
-  inputs: {
-
-  },
-
-
-  exits: {
-
-  },
-
-
-  fn: async function (inputs) {
-
-    // All done.
-    return;
-
-  }
-
-
+  return res.redirect('/turma/'+req.body.professor.id);
 };
