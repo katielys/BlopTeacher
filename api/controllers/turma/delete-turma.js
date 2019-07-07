@@ -26,7 +26,10 @@ module.exports = {
       professor : inputs.professor
     }).populate('alunos');
     
-    return {turmas : turmasProf};
+    return {
+      turmas : turmasProf,
+      idProfessor : inputs.professor
+    };
   }
 
 

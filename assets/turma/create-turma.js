@@ -1,5 +1,4 @@
-listaNomeAlunos = [];
-listaIdAlunos = [];
+listaAlunos = [];
 
 function getAluno(){
     var nomeAluno = $('#bota-nome-aluno').val();
@@ -11,8 +10,10 @@ function getAluno(){
             nomeAluno : nomeAluno
         },
         success : function(aluno){
-            listaNomeAlunos.push(aluno.nome);
-            listaIdAlunos.push(aluno.id);
+            listaAlunos.push({
+                "id" : aluno.id,
+                "nome" : aluno.nome
+            });
             reloadList();
         },
         error : function(aluno){
@@ -27,23 +28,47 @@ function reloadList(){
         lista.removeChild(lista.firstChild);
     }
 
-    listaNomeAlunos.forEach(nomeAluno => {
+    listaAlunos.forEach(aluno => {
         var row = document.createElement('TR');
-        var td = document.createElement('TD');
-        var texto = document.createTextNode(nomeAluno);
+        var td1 = document.createElement('TD');
+        var td2 = document.createElement('TD');
+        var butao = document.createElement('button');
+        var texto = document.createTextNode(aluno.nome);
+        
+        //Setar o nome, value e style
+        butao.setAttribute('name', aluno.nome);
+        butao.setAttribute('class', "btn btn-primary");
+        butao.innerHTML = "Remover";
+        
+        //Setar a acao
+        butao.addEventListener("click", function(){
+            for(var i = 0; i < listaAlunos.length; i++){ 
+                if (listaAlunos[i].nome === this.name) {
+                    listaAlunos.splice(i, 1); 
+                }
+            }
+            reloadList();
+        });
 
-        td.appendChild(texto);
-        row.appendChild(td);
+        td1.appendChild(texto);
+        td2.appendChild(butao);
+        row.appendChild(td1);
+        row.appendChild(td2);
         
         lista.appendChild(row);
     });
 }
 
 function salvaTurma(){
-    console.log(listaNomeAlunos.length);
+    console.log(listaAlunos.length);
     var nomeTurma = $('#bota-nome-turma').val();
+    var listaIdAlunos = [];
     console.log(nomeTurma);
     console.log(teacher.fullName);
+
+    listaAlunos.forEach(aluno => {
+        listaIdAlunos.push(aluno.id);
+    });
 
     $.ajax({
         url : '/turma/nova-turma',

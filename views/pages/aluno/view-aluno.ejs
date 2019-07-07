@@ -38,37 +38,25 @@
           					erros_tres += score.num_erros;
           					tempo_tres += score.tempo;
         				}
-        				else if(score.fase == 4){
-          					contQuatro += 1;
-          					acertos_quatro += score.num_acertos;
-          					erros_quatro += score.num_erros;
-          					tempo_quatro += score.tempo;
-        				}
       				});
 				%>
 				<tr>
           			<td>Lógica booleana</td>
-          			<td><%=acertos_um/contUm%></td>
-          			<td><%=erros_um/contUm%></td>
-          			<td><%=tempo_um/contUm%></td>
+          			<td><%=acertos_um/(contUm === 0 ? 1 : contUm)%></td>
+          			<td><%=erros_um/(contUm === 0 ? 1 : contUm)%></td>
+          			<td><%=tempo_um/(contUm === 0 ? 1 : contUm)%></td>
         		</tr>
         		<tr>
           			<td>Divisão e conquista</td>
-					<td><%=acertos_dois/contDois%></td>
-          			<td><%=erros_dois/contDois%></td>
-          			<td><%=tempo_dois/contDois%></td>
+					<td><%=acertos_dois/(contDois === 0 ? 1 : contDois)%></td>
+          			<td><%=erros_dois/(contDois === 0 ? 1 : contDois)%></td>
+          			<td><%=tempo_dois/(contDois === 0 ? 1 : contDois)%></td>
         		</tr>
         		<tr>
-          			<td>Estruturas de repeticao</td>
-          			<td><%=acertos_tres/contTres%></td>
-          			<td><%=erros_tres/contTres%></td>
-          			<td><%=tempo_tres/contTres%></td>
-        		</tr>
-        		<tr>
-          			<td>Juncao dos conceitos</td>
-          			<td><%=acertos_quatro/contQuatro%></td>
-          			<td><%=erros_quatro/contQuatro%></td>
-          			<td><%=tempo_quatro/contQuatro%></td>
+          			<td>Estruturas de repetição</td>
+          			<td><%=acertos_tres/(contTres === 0 ? 1 : 0)%></td>
+          			<td><%=erros_tres/(contTres === 0 ? 1 : 0)%></td>
+          			<td><%=tempo_tres/(contTres === 0 ? 1 : 0)%></td>
         		</tr>
 			</tbody>
 		</table>
